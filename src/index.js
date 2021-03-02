@@ -15,15 +15,10 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
-      <Route path="/lists">
-          <Lists />
-        </Route>
-        <Route path="/api">
-          <Database />
-        </Route>
-        <Route path="/">
-          <App />
-        </Route>
+        <Route path="/lists" component={Lists}/>
+        <Route path="/api/:path" component={Database}/>
+        <Route path="/api" component={Database}/>
+        <Route path="/" component={App}/>
       </Switch>
     </Router>
   </React.StrictMode>,

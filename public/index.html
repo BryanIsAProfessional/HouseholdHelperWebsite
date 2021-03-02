@@ -7,9 +7,9 @@
 
     <!-- update the version number as needed -->  
     <script defer src="/__/firebase/8.2.9/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/8.2.9/firebase-auth.js"></script>
     <script defer src="/__/firebase/8.2.9/firebase-database.js"></script>
+    <!-- include only the Firebase features as you need 
     <script defer src="/__/firebase/8.2.9/firebase-firestore.js"></script>
     <script defer src="/__/firebase/8.2.9/firebase-functions.js"></script>
     <script defer src="/__/firebase/8.2.9/firebase-messaging.js"></script>
@@ -17,7 +17,7 @@
     <script defer src="/__/firebase/8.2.9/firebase-analytics.js"></script>
     <script defer src="/__/firebase/8.2.9/firebase-remote-config.js"></script>
     <script defer src="/__/firebase/8.2.9/firebase-performance.js"></script>
-    <!-- 
+    
       initialize the SDK after all desired features are loaded, set useEmulator to false
       to avoid connecting the SDK to running emulators.
     -->
@@ -47,8 +47,8 @@
         // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
         // // The Firebase SDK is initialized and available here!
         //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        firebase.auth().onAuthStateChanged(user => { });
+        firebase.database().ref('/path/to/ref').on('value', snapshot => { });
         // firebase.firestore().doc('/foo/bar').get().then(() => { });
         // firebase.functions().httpsCallable('yourFunction')().then(() => { });
         // firebase.messaging().requestPermission().then(() => { });
@@ -64,13 +64,23 @@
           let features = [
             'auth', 
             'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
+        //     'firestore',
+        //     'functions',
+        //     'messaging', 
+        //     'storage', 
+        //     'analytics', 
+        //     'remoteConfig',
+        //     'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+        try {
+          let app = firebase.app();
+          let features = [
+            
           ].filter(feature => typeof app[feature] === 'function');
           loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
         } catch (e) {

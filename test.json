@@ -1,6 +1,46 @@
 {
-    "profiles":[
-        "Bryan", "Diana"
-    ]
-
+    "users":{
+        "0":{
+            "profile":{
+                "name": "Bryan"
+            },
+            "lists":[
+                {
+                    "title": "Shopping list",
+                    "id": "zxvnknaszdflzsd",
+                    "items":[
+                        {
+                            "content": "Bread",
+                            "checked": false,
+                            "id": 0
+                        },
+                        {
+                            "content": "Milk",
+                            "checked": false,
+                            "id": 1
+                        },
+                        {
+                            "content": "Eggs",
+                            "checked": false,
+                            "id": 2
+                        }]
+                },
+                {
+                    "title": "To Do List",
+                    "id": "axcgvlkjzlhwea",
+                    "items":[
+                        {
+                            "content": "Bryan",
+                            "checked": false,
+                            "id": 3
+                        },
+                        {
+                            "content": "Diana",
+                            "checked": false,
+                            "id": 4
+                        }]
+                }
+            ]
+        }
+    }
 }
