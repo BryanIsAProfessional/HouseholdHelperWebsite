@@ -22,7 +22,6 @@ class ListItem extends Component {
                       <input
                         type="checkbox"
                         checked={this.props.item.checked}
-                        ref="checked"
                         onChange={this.props.onChecked}
                       />
                         {this.props.item.content} | id: {this.props.item.id} | key: {this.props.item.id}

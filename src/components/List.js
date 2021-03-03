@@ -27,7 +27,7 @@ class List extends Component {
                             return(
                                 <ListContainer ref={provided.innerRef}{...provided.droppableProps}{...provided.dragHandleProps}>
                                     {this.props.items.map((item, index) => {
-                                        return <ListItem key={item.id + "," + index} item={item} index={index} onChecked={this.props.onChecked}/>
+                                        return <ListItem key={item.id + "," + index} item={item} index={index} onChecked={this.props.onChecked} database={this.props.database}/>
                                     })}
                                     {provided.placeholder}
                                 </ListContainer>
