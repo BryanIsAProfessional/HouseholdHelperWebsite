@@ -1,46 +1,48 @@
 {
     "users":{
-        "0":{
-            "profile":{
-                "name": "Bryan"
-            },
-            "lists":[
+        "kY9wsKsNZQctJE9aLRtwHh5T3wV2":{
+            "name": "Bryan",
+            "lists": ["zxvnknaszdflzsd", "axcgvlkjzlhwea"]
+        }
+    },
+    "lists":
+    {
+        "zxvnknaszdflzsd":{
+            "title": "Shopping list",
+            "ownerId": "kY9wsKsNZQctJE9aLRtwHh5T3wV2",
+            "index": 0,
+            "items":[
                 {
-                    "title": "Shopping list",
-                    "id": "zxvnknaszdflzsd",
-                    "items":[
-                        {
-                            "content": "Bread",
-                            "checked": false,
-                            "id": 0
-                        },
-                        {
-                            "content": "Milk",
-                            "checked": false,
-                            "id": 1
-                        },
-                        {
-                            "content": "Eggs",
-                            "checked": false,
-                            "id": 2
-                        }]
+                    "content": "Bread",
+                    "checked": false,
+                    "id": 0
                 },
                 {
-                    "title": "To Do List",
-                    "id": "axcgvlkjzlhwea",
-                    "items":[
-                        {
-                            "content": "Bryan",
-                            "checked": false,
-                            "id": 3
-                        },
-                        {
-                            "content": "Diana",
-                            "checked": false,
-                            "id": 4
-                        }]
-                }
-            ]
+                    "content": "Milk",
+                    "checked": false,
+                    "id": 1
+                },
+                {
+                    "content": "Eggs",
+                    "checked": false,
+                    "id": 2
+                }]
+        },
+        "axcgvlkjzlhwea": {
+            "title": "To Do List",
+            "ownerId": "kY9wsKsNZQctJE9aLRtwHh5T3wV2",
+            "index": 1,
+            "items":[
+                {
+                    "content": "Bryan",
+                    "checked": false,
+                    "id": 3
+                },
+                {
+                    "content": "Diana",
+                    "checked": false,
+                    "id": 4
+                }]
         }
-    }
+    }   
 }

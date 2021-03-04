@@ -1,8 +1,8 @@
 import '../all.css';
 import { Container } from 'react-bootstrap'
 import { useAuth } from '../contexts/AuthContext'
-import Login from '../components/Login';
 import Logout from '../components/Logout';
+import Signup from '../components/Signup';
 
 function LoginPage() {
 
@@ -14,8 +14,8 @@ function LoginPage() {
   }else{
     return (
       <Container>
-        <Login/>
-        <a href="/signup">Create an account</a>
+        <Signup/>
+        <div>Already have an account? <a href="/login">Log in here!</a></div>
       </Container>
     );
   }

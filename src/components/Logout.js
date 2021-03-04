@@ -23,7 +23,7 @@ function Logout() {
 
     return (
         <>
-        <div>Signed in as {currentUser.displayName || currentUser.email}</div>
+        <div>Logged in as {currentUser.displayName || currentUser.email}</div>
         {error && <Alert variant='danger'>{error}</Alert>}
         <Button disabled={loading} onClick={handleLogout}>Log Out</Button>
         </>

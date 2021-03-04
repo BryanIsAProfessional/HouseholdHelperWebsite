@@ -19,11 +19,11 @@ class ListItem extends Component {
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                     >
-                      <input
+                      {/* <input
                         type="checkbox"
                         checked={this.props.item.checked}
                         onChange={this.props.onChecked}
-                      />
+                      /> */}
                         {this.props.item.content} | id: {this.props.item.id} | key: {this.props.item.id}
                     </Container>
                 )
